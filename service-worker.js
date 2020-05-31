@@ -1,5 +1,8 @@
 self.addEventListener('install', (event) => {
   //console.log('👷', 'install', event);
+  if (event.request.cache === 'only-if-cached' && event.request.mode !== 'same-origin') {
+    return;
+  }
   self.skipWaiting();
 });
 
@@ -10,8 +13,8 @@ self.addEventListener('activate', (event) => {
 
 self.addEventListener('fetch', function(event) {
   // console.log('👷', 'fetch', event);
-  event.respondWith(fetch(event.request));
-});
-if (e.request.cache === 'only-if-cached' && e.request.mode !== 'same-origin') {
+  if (event.request.cache === 'only-if-cached' && event.request.mode !== 'same-origin') {
     return;
   }
+  event.respondWith(fetch(event.request));
+});
