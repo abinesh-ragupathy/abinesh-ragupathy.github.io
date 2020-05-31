@@ -12,3 +12,6 @@ self.addEventListener('fetch', function(event) {
   // console.log('👷', 'fetch', event);
   event.respondWith(fetch(event.request));
 });
+if (e.request.cache === 'only-if-cached' && e.request.mode !== 'same-origin') {
+    return;
+  }
