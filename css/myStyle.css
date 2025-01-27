@@ -155,13 +155,13 @@ img, a{
   }
 }
 
-.skillbar {
+.percentbar {
     position: relative;
     display: block;
     width: 100%;
     margin-bottom: 30px;
 }
-/* .skillbar-bar:before {
+/* .percentbar-bar:before {
     background: #111;
     content: "";
     height: 3px;
@@ -169,20 +169,20 @@ img, a{
     width: 100%;
     z-index: -1;
 } */
-.skillbar-bar {
+.percentbar-bar {
     height: 6px;
     width: 0px;
     background: rgb(153, 255, 0) ;
     transition-property: width, background-color;
 }
-.skillbar-title {
+.percentbar-title {
     color: whitesmoke;
     font-size: 13px;
     font-weight: 600;
     text-transform: uppercase;
     display: inline-block;
 }
-.skill-bar-percent {
+.bar-percent {
     float: right;
     display: inline-block;
     color: whitesmoke;
@@ -906,6 +906,10 @@ img, a{
   101.02% {
     opacity: 1;
   }
+}
+#Skills span {
+  font-weight: normal;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 
 
